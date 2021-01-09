@@ -75,12 +75,11 @@ function itemToHTML(listOfItems)
         // Remove Item
         let itemId = e.target.parentElement.id;
         listOfNotes.splice(itemId, 1);
-        // Save
-        localStorage.setItem("PlannerNotes", JSON.stringify(listOfNotes));
         // Load
         itemToHTML(listOfNotes);
       })
     }
+    localStorage.setItem("PlannerNotes", JSON.stringify(listOfNotes));
 }
 
 function addNote(){
@@ -102,6 +101,7 @@ function addNote(){
       linkInput.value = "";
     }
   }
+  noteInput.focus();
   itemToHTML(listOfNotes);
 }
 document.querySelector("#inputform").addEventListener("keypress", e=>{

@@ -4,12 +4,18 @@ body{
   font-family: monospace;
   font-weight: 900;
   font-size: 2rem;
-  text-transform: uppercase;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 }
 p, a{
   display: inline;
   margin: 0px 0px;
+}
+#todoList{
+  width: 100%;
+  max-width: 960px;
 }
 .item{
   background: #fff;
@@ -36,6 +42,7 @@ h1{
   color: #000;
   display: inline-block;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 span{
   background: #ff0;
